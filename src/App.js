@@ -8,7 +8,7 @@ class App extends Component {
       {
         id: 1,
         title: 'Buy Wand',
-        complete: false
+        complete: true
       },
       {
         id: 2,
