@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Here's the title</h1>
-      <Todos />
+      <Todos todos={this.state.todos}/>
       </div>
     );
   }
