@@ -15,7 +15,8 @@ export class TodoItem extends Component {
   render() {
     return (
       <div>
-        <div style={this.getStyle()}>Name: {this.props.todo.title}</div>
+        <input type="checkbox" onChange = {this.makeComplete)/>
+        <p style={this.getStyle()}>Name: {this.props.todo.title}</p>
       </div>
     );
   }
