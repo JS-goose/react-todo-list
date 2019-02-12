@@ -3,8 +3,14 @@ import TodoItem from "./TodoItem";
 import PropTypes from "prop-types";
 
 class Todos extends Component {
+  makeComplete = (event) => {
+    console.log(event);
+  };
+  
   render() {
-    return this.props.todos.map((todo) => <TodoItem todo={todo} key={todo.id} />);
+    return this.props.todos.map((todo) => (
+      <TodoItem todo={todo} key={todo.id} makeComplete={this.markComplete} />
+    ));
   }
 }
 
