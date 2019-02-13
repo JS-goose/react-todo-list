@@ -22,11 +22,16 @@ class App extends Component {
       },
     ]
   }
+
+  makeComplete = (event) => {
+    console.log(event);
+  };
+
   render() {
     return (
       <div className="App">
       <h1>Here's the title</h1>
-      <Todos todos={this.state.todos}/>
+      <Todos todos={this.state.todos} makeComplete = {this.makeComplete}/>
       </div>
     );
   }
