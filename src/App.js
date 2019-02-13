@@ -23,7 +23,8 @@ class App extends Component {
     ],
   };
 
-  makeComplete = (id) => {
+  // Toggle todo item as complete/incomplete
+  toggleComplete = (id) => {
     this.setState({
       todos: this.state.todos.map((todo) => {
         if (id === todo.id) {
@@ -38,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Todo List</h1>
-        <Todos todos={this.state.todos} makeComplete={this.makeComplete} />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
       </div>
     );
   }
