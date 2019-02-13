@@ -8,7 +8,7 @@ class App extends Component {
       {
         id: 1,
         title: "Buy Wand",
-        complete: true,
+        complete: false,
       },
       {
         id: 2,
@@ -23,9 +23,15 @@ class App extends Component {
     ],
   };
 
-  makeComplete = (event) => {
-    console.log("bacon");
-    this.setState({ complete: true });
+  makeComplete = (id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        if (id === todo.id) {
+          todo.complete = !todo.complete;
+        }
+        return todo;
+      }),
+    });
   };
 
   render() {
