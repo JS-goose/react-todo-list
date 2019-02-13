@@ -37,12 +37,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>React Todo List</h1>
+      <div className="App" style={todoStyle}>
+        <h1 style={titleStyle}>React Todo List</h1>
         <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
       </div>
     );
   }
 }
 
+const todoStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '560px',
+  margin: 'auto',
+  marginTop: '100px',
+  height: '600px',
+  borderRadius: '10px',
+  boxShadow: '1px 1px 3px gray'
+}
+
+const titleStyle = {
+  textAlign: 'center',
+  padding: '5px 0',
+  borderBottom: '1px solid gray',
+  color: '#0180ff',
+}
 export default App;
