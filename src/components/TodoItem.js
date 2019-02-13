@@ -41,7 +41,8 @@ const delBtn = {
   borderRadius: '50%',
   float: 'right',
   boxShadow: '1px 1px 3px gray',
-  marginTop: '-3px'
+  marginTop: '-3px',
+  cursor: 'pointer'
 }
 
 export default TodoItem;
