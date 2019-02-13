@@ -17,6 +17,31 @@ class App extends Component {
       },
       {
         id: 3,
+        title: "Go to potions class",
+        complete: false,
+      },
+      {
+        id: 4,
+        title: "Learn dark arts defense",
+        complete: false,
+      },
+      {
+        id: 5,
+        title: "Meet Hagrid for lunch",
+        complete: false,
+      },
+      {
+        id: 6,
+        title: "Go to Quidditch practice",
+        complete: false,
+      },
+      {
+        id: 7,
+        title: "Find Hedwig",
+        complete: false,
+      },
+      {
+        id: 8,
         title: "Defeat Voldemort",
         complete: false,
       },
