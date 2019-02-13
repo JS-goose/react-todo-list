@@ -33,13 +33,15 @@ TodoItem.propTypes = {
 };
 
 const delBtn = {
-  backgroundColor: 'black',
+  backgroundColor: 'white',
   color: 'red',
   fontWeight: 900,
   padding: '7px 10px',
   border: 'none',
   borderRadius: '50%',
-  float: 'right'
+  float: 'right',
+  boxShadow: '1px 1px 3px gray',
+  marginTop: '-3px'
 }
 
 export default TodoItem;
