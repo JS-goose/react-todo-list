@@ -35,11 +35,18 @@ class App extends Component {
     });
   };
 
+  // Delets a specific todo item
+  delItem = (id) => {
+    this.setState({
+      todos: [...this.state.todos.filter(todo => todo.id !== id)]
+    })
+  }
+
   render() {
     return (
       <div className="App" style={todoStyle}>
         <h1 style={titleStyle}>React Todo List</h1>
-        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} delItem = {this.delItem}/>
       </div>
     );
   }
