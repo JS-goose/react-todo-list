@@ -12,16 +12,15 @@ export class TodoItem extends Component {
     };
   };
 
-
-
   render() {
-    const { id,title } = this.props.todo;
+    const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
         <p>
-          <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} /> {' '}
-          Name: {title}
-          <button onClick = {this.props.delItem.bind(this, id)} style={delBtn}>X</button>
+          <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} /> {title}
+          <button onClick={this.props.delItem.bind(this, id)} style={delBtn}>
+            X
+          </button>
         </p>
       </div>
     );
@@ -33,16 +32,16 @@ TodoItem.propTypes = {
 };
 
 const delBtn = {
-  backgroundColor: 'white',
-  color: 'red',
+  backgroundColor: "white",
+  color: "red",
   fontWeight: 900,
-  padding: '7px 10px',
-  border: 'none',
-  borderRadius: '50%',
-  float: 'right',
-  boxShadow: '1px 1px 3px gray',
-  marginTop: '-3px',
-  cursor: 'pointer'
-}
+  padding: "7px 10px",
+  border: "none",
+  borderRadius: "50%",
+  float: "right",
+  boxShadow: "1px 1px 3px gray",
+  marginTop: "-3px",
+  cursor: "pointer",
+};
 
 export default TodoItem;
