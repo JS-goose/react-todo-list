@@ -24,8 +24,8 @@ class App extends Component {
   }
 
   makeComplete = (event) => {
-    console.log(event);
-  };
+    console.log('bacon');
+  } 
 
   render() {
     return (
