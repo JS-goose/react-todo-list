@@ -11,9 +11,13 @@ export class AddTodo extends Component {
     })
   }
 
+  onSubmit = (event) => {
+      event.preventDefault();
+  }
+
   render() {
     return (
-      <form style={{ display: "flex" }}>
+      <form onSubmit = {this.onSubmit} style={{ display: "flex" }}>
         <input
           type="text"
           name="title"
