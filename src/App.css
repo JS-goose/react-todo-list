@@ -13,3 +13,25 @@ a {
   color: rgb(33, 119, 218);
   text-decoration: none;
 }
+
+.addBtn {
+  display: inline-block;
+  border: none;
+  background-color: #333;
+  color: #0180ff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+form input:first-of-type {
+  border: none;
+}
+
+form input:first-of-type:focus {
+  border: 1px solid #0180ff;
+}
