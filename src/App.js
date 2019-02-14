@@ -14,37 +14,27 @@ class App extends Component {
         complete: false,
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: "Buy Broom",
         complete: false,
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: "Go to potions class",
         complete: false,
       },
       {
-        id: 4,
+        id: uuid.v4(),
         title: "Learn dark arts defense",
         complete: false,
       },
       {
-        id: 5,
+        id: uuid.v4(),
         title: "Meet Hagrid for lunch",
         complete: false,
       },
       {
-        id: 6,
-        title: "Go to Quidditch practice",
-        complete: false,
-      },
-      {
-        id: 7,
-        title: "Find Hedwig",
-        complete: false,
-      },
-      {
-        id: 8,
+        id: uuid.v4(),
         title: "Defeat Voldemort",
         complete: false,
       },
@@ -77,6 +67,7 @@ class App extends Component {
       title,
       complete: false,
     };
+    // copy's existing todos and then adds the new one to state
     this.setState({ todos: [...this.state.todos, newItem] });
   };
 
