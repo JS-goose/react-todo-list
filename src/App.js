@@ -65,30 +65,36 @@ class App extends Component {
   // Delets a specific todo item
   delItem = (id) => {
     this.setState({
-      todos: [...this.state.todos.filter(todo => todo.id !== id)]
-    })
-  }
+      todos: [...this.state.todos.filter((todo) => todo.id !== id)],
+    });
+  };
 
   render() {
     return (
       <div className="App" style={todoStyle}>
-        <Header />
-        <AddTodo />
-        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} delItem = {this.delItem}/>
+        <div className="container">
+          <Header />
+          <AddTodo />
+          <Todos
+            todos={this.state.todos}
+            toggleComplete={this.toggleComplete}
+            delItem={this.delItem}
+          />
+        </div>
       </div>
     );
   }
 }
 
 const todoStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '560px',
-  margin: 'auto',
-  marginTop: '100px',
-  height: '600px',
-  borderRadius: '10px',
-  boxShadow: '1px 1px 3px gray'
-}
+  display: "flex",
+  flexDirection: "column",
+  width: "560px",
+  margin: "auto",
+  marginTop: "100px",
+  height: "600px",
+  borderRadius: "10px",
+  boxShadow: "1px 1px 3px gray",
+};
 
 export default App;
