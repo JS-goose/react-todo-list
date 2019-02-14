@@ -73,8 +73,8 @@ class App extends Component {
     return (
       <div className="App" style={todoStyle}>
         <Header />
-        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} delItem = {this.delItem}/>
         <AddTodo />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} delItem = {this.delItem}/>
       </div>
     );
   }
