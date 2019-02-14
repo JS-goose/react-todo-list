@@ -12,7 +12,10 @@ const titleStyle = {
   textAlign: "center",
   padding: "5px 0",
   borderBottom: "1px solid gray",
+  borderTopLeftRadius: '5px',
+  borderTopRightRadius: '5px',
   color: "#0180ff",
+  backgroundColor: '#333',
 };
 
 export default Header;
