@@ -17,15 +17,16 @@ a {
 .addBtn {
   display: inline-block;
   border: none;
-  background-color: #333;
-  color: #0180ff;
+  background-color: white;
+  color: #555;
   padding: 7px 20px;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1em;
 }
 
 .addBtn:hover {
-  background-color: #f4f4f4;
-  color: #333;
+  color: #0180ff;
 }
 
 form input:first-of-type {
