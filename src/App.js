@@ -3,12 +3,13 @@ import Todos from "./components/Todos";
 import "./App.css";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
+import uuid from "uuid";
 
 class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: "Buy Wand",
         complete: false,
       },
@@ -72,19 +73,19 @@ class App extends Component {
   // Adds a todo item
   addTodo = (title) => {
     const newItem = {
-      id: 9,
+      id: uuid.v4(),
       title,
       complete: false,
-    }
-    this.setState({todos: [...this.state.todos, newItem]})
-  }
+    };
+    this.setState({ todos: [...this.state.todos, newItem] });
+  };
 
   render() {
     return (
       <div className="App" style={todoStyle}>
         <div className="container">
           <Header />
-          <AddTodo addTodo={this.addTodo}/>
+          <AddTodo addTodo={this.addTodo} />
           <Todos
             todos={this.state.todos}
             toggleComplete={this.toggleComplete}
