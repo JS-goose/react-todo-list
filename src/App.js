@@ -69,12 +69,17 @@ class App extends Component {
     });
   };
 
+  // Adds a todo item
+  addTodo = (title) => {
+    console.log(title);
+  }
+
   render() {
     return (
       <div className="App" style={todoStyle}>
         <div className="container">
           <Header />
-          <AddTodo />
+          <AddTodo addTodo={this.addTodo}/>
           <Todos
             todos={this.state.todos}
             toggleComplete={this.toggleComplete}
