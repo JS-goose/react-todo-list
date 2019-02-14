@@ -19,7 +19,7 @@ export class TodoItem extends Component {
         <p>
           <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} /> {title}
           <button onClick={this.props.delItem.bind(this, id)} style={delBtn}>
-          <i class="fas fa-trash-alt"></i>
+          <i className="fas fa-trash-alt"></i>
           </button>
         </p>
       </div>
