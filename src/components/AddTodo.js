@@ -5,6 +5,12 @@ export class AddTodo extends Component {
     title: "",
   };
 
+  onChange = (event) => {
+    this.setState({
+        [event.target.name] : event.target.value
+    })
+  }
+
   render() {
     return (
       <form style={{ display: "flex" }}>
@@ -14,6 +20,7 @@ export class AddTodo extends Component {
           placeholder="Add todo item..."
           value={this.state.title}
           style={{ flex: "10", padding: "10px" }}
+          onChange={this.onChange}
         />
         <input type="submit" value="Submit" className="addBtn" style={{ flex: "1" }} />
       </form>
