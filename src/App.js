@@ -45,8 +45,9 @@ class App extends Component {
   };
 
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-    .then(response => this.setState({todos: response.data}))
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+      .then((response) => this.setState({ todos: response.data }));
   }
 
   // Toggle todo item as complete/incomplete
@@ -75,8 +76,10 @@ class App extends Component {
     //   title,
     //   completed: false,
     // };
+    axios
+      .post("https://jsonplaceholder.typicode.com/todos", { title, completed: false })
+      .then((response) => this.setState({ todos: [...this.state.todos, response.data] }));
     // copy's existing todos and then adds the new one to state
-    this.setState({ todos: [...this.state.todos, newItem] });
   };
 
   render() {
