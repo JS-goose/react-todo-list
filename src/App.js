@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import uuid from "uuid";
-import Axios from "axios";
+import axios from "axios";
 import "./App.css";
 import Todos from "./components/Todos";
 import About from "./components/pages/About";
@@ -43,6 +43,11 @@ class App extends Component {
       // },
     ],
   };
+
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    .then(response => this.setState({todos: response.data}))
+  }
 
   // Toggle todo item as complete/incomplete
   toggleComplete = (id) => {
