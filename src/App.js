@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import uuid from "uuid";
+// import uuid from "uuid";
 import axios from "axios";
 import "./App.css";
 import Todos from "./components/Todos";
@@ -70,11 +70,11 @@ class App extends Component {
 
   // Adds a todo item
   addTodo = (title) => {
-    const newItem = {
-      id: uuid.v4(),
-      title,
-      completed: false,
-    };
+    // const newItem = {
+    //   id: uuid.v4(),
+    //   title,
+    //   completed: false,
+    // };
     // copy's existing todos and then adds the new one to state
     this.setState({ todos: [...this.state.todos, newItem] });
   };
