@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
 import uuid from "uuid";
+import About from "./components/pages/About";
 
 class App extends Component {
   state = {
@@ -78,12 +79,20 @@ class App extends Component {
         <div className="App" style={todoStyle}>
           <div className="container">
             <Header />
-            <AddTodo addTodo={this.addTodo} />
-            <Todos
-              todos={this.state.todos}
-              toggleComplete={this.toggleComplete}
-              delItem={this.delItem}
+            <Route
+              exact path="/"
+              render={(props) => (
+                <React.Fragment>
+                  <AddTodo addTodo={this.addTodo} />
+                  <Todos
+                    todos={this.state.todos}
+                    toggleComplete={this.toggleComplete}
+                    delItem={this.delItem}
+                  />
+                </React.Fragment>
+              )}
             />
+            <Route path="/about" component={About} />
           </div>
         </div>
       </Router>
