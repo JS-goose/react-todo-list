@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import uuid from "uuid";
+import Axios from "axios";
 import "./App.css";
 import Todos from "./components/Todos";
 import About from "./components/pages/About";
@@ -80,7 +81,8 @@ class App extends Component {
           <div className="container">
             <Header />
             <Route
-              exact path="/"
+              exact
+              path="/"
               render={(props) => (
                 <React.Fragment>
                   <AddTodo addTodo={this.addTodo} />
