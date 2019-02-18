@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <h1 style={titleStyle}>React Todo List</h1>
+      <Link to="/" style={linkStyle}>Home</Link> |<Link to="/about" style={linkStyle}>About</Link>
     </header>
   );
 }
@@ -18,6 +20,9 @@ const titleStyle = {
   backgroundColor: "#333",
 };
 
-
+const linkStyle = {
+  paddingLeft: '5px',
+  fontWeight: '700',
+}
 
 export default Header;
