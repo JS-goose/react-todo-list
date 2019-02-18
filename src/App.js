@@ -1,45 +1,45 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Todos from "./components/Todos";
+import uuid from "uuid";
 import "./App.css";
+import Todos from "./components/Todos";
+import About from "./components/pages/About";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
-import uuid from "uuid";
-import About from "./components/pages/About";
 
 class App extends Component {
   state = {
     todos: [
-      {
-        id: uuid.v4(),
-        title: "Buy Wand",
-        complete: false,
-      },
-      {
-        id: uuid.v4(),
-        title: "Buy Broom",
-        complete: false,
-      },
-      {
-        id: uuid.v4(),
-        title: "Go to potions class",
-        complete: false,
-      },
-      {
-        id: uuid.v4(),
-        title: "Learn dark arts defense",
-        complete: false,
-      },
-      {
-        id: uuid.v4(),
-        title: "Meet Hagrid for lunch",
-        complete: false,
-      },
-      {
-        id: uuid.v4(),
-        title: "Defeat Voldemort",
-        complete: false,
-      },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Buy Wand",
+      //   complete: false,
+      // },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Buy Broom",
+      //   complete: false,
+      // },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Go to potions class",
+      //   complete: false,
+      // },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Learn dark arts defense",
+      //   complete: false,
+      // },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Meet Hagrid for lunch",
+      //   complete: false,
+      // },
+      // {
+      //   id: uuid.v4(),
+      //   title: "Defeat Voldemort",
+      //   complete: false,
+      // },
     ],
   };
 
