@@ -64,9 +64,11 @@ class App extends Component {
 
   // Delets a specific todo item
   delItem = (id) => {
-    this.setState({
-      todos: [...this.state.todos.filter((todo) => todo.id !== id)],
-    });
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`).then((response) =>
+      this.setState({
+        todos: [...this.state.todos.filter((todo) => todo.id !== id)],
+      })
+    );
   };
 
   // Adds a todo item
@@ -116,7 +118,7 @@ const todoStyle = {
   width: "560px",
   margin: "auto",
   marginTop: "100px",
-  height: "600px",
+  height: "100%",
   borderRadius: "10px",
   boxShadow: "1px 1px 3px gray",
 };
