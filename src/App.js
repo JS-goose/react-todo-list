@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Todos from "./components/Todos";
 import "./App.css";
 import Header from "./components/layout/Header";
@@ -73,17 +74,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={todoStyle}>
-        <div className="container">
-          <Header />
-          <AddTodo addTodo={this.addTodo} />
-          <Todos
-            todos={this.state.todos}
-            toggleComplete={this.toggleComplete}
-            delItem={this.delItem}
-          />
+      <Router>
+        <div className="App" style={todoStyle}>
+          <div className="container">
+            <Header />
+            <AddTodo addTodo={this.addTodo} />
+            <Todos
+              todos={this.state.todos}
+              toggleComplete={this.toggleComplete}
+              delItem={this.delItem}
+            />
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
