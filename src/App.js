@@ -54,7 +54,7 @@ class App extends Component {
     this.setState({
       todos: this.state.todos.map((todo) => {
         if (id === todo.id) {
-          todo.complete = !todo.complete;
+          todo.completed = !todo.completed;
         }
         return todo;
       }),
@@ -73,7 +73,7 @@ class App extends Component {
     const newItem = {
       id: uuid.v4(),
       title,
-      complete: false,
+      completed: false,
     };
     // copy's existing todos and then adds the new one to state
     this.setState({ todos: [...this.state.todos, newItem] });
