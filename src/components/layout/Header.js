@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <h1 style={titleStyle}>React Todo List</h1>
-      <Link to="/" style={linkStyle}>Home</Link> |<Link to="/about" style={linkStyle}>About</Link>
+      <Link to="/" style={linkStyle}>Home</Link>|<Link to="/about" style={linkStyle}>About</Link>
     </header>
   );
 }
@@ -21,7 +21,7 @@ const titleStyle = {
 };
 
 const linkStyle = {
-  paddingLeft: '5px',
+  padding: '5px',
   fontWeight: '700',
 }
 
