@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({
       todos: this.state.todos.map((todo) => {
         if (id === todo.id) {
-          todo.completed = !todo.completed;
+          todo.complete = !todo.complete;
         }
         return todo;
       }),
@@ -79,7 +79,7 @@ class App extends Component {
     //   completed: false,
     // };
     axios
-      .post("https://jsonplaceholder.typicode.com/todos", { title, completed: false })
+      .post("https://jsonplaceholder.typicode.com/todos", { title, complete: false })
       .then((response) => this.setState({ todos: [...this.state.todos, response.data] }));
     // copy's existing todos and then adds the new one to state
   };
