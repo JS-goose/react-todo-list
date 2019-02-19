@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import uuid from "uuid";
+import uuid from "uuid";
 import axios from "axios";
 import "./App.css";
 import Todos from "./components/Todos";
@@ -73,15 +73,19 @@ class App extends Component {
 
   // Adds a todo item
   addTodo = (title) => {
-    // const newItem = {
-    //   id: uuid.v4(),
-    //   title,
-    //   completed: false,
-    // };
-    axios
-      .post("https://jsonplaceholder.typicode.com/todos", { title, complete: false })
-      .then((response) => this.setState({ todos: [...this.state.todos, response.data] }));
-    // copy's existing todos and then adds the new one to state
+    const newItem = {
+      id: uuid.v4(),
+      title,
+      completed: false,
+    };
+    //   copy's existing todos and then adds the new one to state
+    this.setState({ todos: [...this.state.todos, newItem] })
+
+    /* This was left out because a solution to setting a unique id could not be found */
+    // axios
+    //   .post("https://jsonplaceholder.typicode.com/todos", { title, complete: false })
+    //  // copy's existing todos and then adds the new one to state
+    //   .then((response) => this.setState({ todos: [...this.state.todos, response.data] }));
   };
 
   render() {
