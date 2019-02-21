@@ -1,5 +1,5 @@
 # React Todo App
-![a preview image of the react todo app](./preview.png)
+![a preview image of the react todo app](./preview.PNG)
 This project was created with [Create React App](https://github.com/facebook/create-react-app).  Below you will find some helpful scripts as well as instructions on using this app yourself.
 
 ## Get It On Your Machine
