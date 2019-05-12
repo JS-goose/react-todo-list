@@ -1,6 +1,9 @@
 # React Todo App
 ![a preview image of the react todo app](./preview.PNG)
 
+## Description
+This is an obligatory todo app built with React.  There's not much to it and it was built to reinforce my knowledge of the framework.  Feel free to do with it as you please :D
+
 <br />This project was created with [Create React App](https://github.com/facebook/create-react-app).  Below you will find some helpful scripts as well as instructions on using this app yourself.
 
 ## Get It On Your Machine
